@@ -10,11 +10,11 @@ thành "standardrawTicketCode"
 - Lỗi 3: const departmentCode = rawTicketCode.slice(4, 7); khoảng cách cắt chuỗi ở đây không đúng lúc này chỉ lấy được 4-5-6 chỉ lấy được 3 thay vì 4 nên khi in ra khoa sẽ bị thiếu, cách khắc phục const departmentCode = rawTicketCode.slice(4, 8) chuyển 7 thành 8 để đảm bảo lấy đúng 4 kí tự.
 
 - Bảng test case:
-    |---|---|---|---|
+   
     |Trường hợp kiểm thử|Dữ liệu đầu vào|Kết quả sai|Kết quả mong đợi|
     |---|---|---|---|
     |1. Theo đúng dữ liệu ban đầu của đề bài|const rawTicketCode = "   med-card-0428-ut   "|"Mã phiếu hợp lệ" = false, "Khoa điều trị" = car, "Chuỗi in phiếu" = "med - car - 0428 - ut"|"Mã phiếu hợp lệ" = True, "Khoa điều trị" = CARD, "Chuỗi in phiếu" = "med - CARD - 0428 - UT" |
     |2. Thay đổi dữ liệu đầu vào không có khoảng trắng|const rawTicketCode = "med-card-0428-ut"|"Mã phiếu hợp lệ" = false, "Khoa điều trị" = car, "Chuỗi in phiếu" = "med - car - 0428 - ut"|"Mã phiếu hợp lệ" = True, "Khoa điều trị" = CARD, "Chuỗi in phiếu" = "med - CARD - 0428 - UT" |
-    |---|---|---|---|
+    
 
 * Do để dữ liệu trong bảng có thể in ra đầy đủ nên em xin phép thay đổi dấu "|" trên dữ liệu đúng thành "-"
